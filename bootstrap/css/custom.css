@@ -1,0 +1,919 @@
+body{
+    overflow-x: hidden;
+    height: 100vh;
+}
+
+@font-face{
+    font-family: 'irsans';
+    src:
+    url('../../Fonts/irsans.ttf') format('truetype');  /* Saf3—5, Chrome4+, FF3.5, Opera 10+ */
+}
+*
+{
+    font-family: 'irsans';
+}
+.container-fluid
+{
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+#header
+{
+    width: 100%;
+    padding-top:20px;
+    background-color:#19283f;
+}
+#header #menu
+{
+    width:100%;
+    padding-top: 10px;
+}
+/*.navbar-nav > li*/
+/*{*/
+    /*float: right;*/
+/*}*/
+.navbar-inverse .navbar-nav > li > a
+{
+
+    font-size: 12px;
+    font-family: 'irsans';
+
+    /*font-weight: 600;*/
+}
+.navbar.navbar-inverse
+{
+
+    background-color: transparent !important;
+    border: none !important;
+}
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active > a:hover
+{
+    background-color:#d94133;
+    border-radius: 5px;
+}
+.navbar-nav > li > a
+{
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+}
+.navbar-nav > li
+{
+    /*direction: rtl !important;*/
+    float: right !important;
+}
+.navbar-header
+{
+    float: right !important;
+}
+.navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand
+{
+    margin-left: 50px !important;
+}
+.navbar-brand
+{
+    line-height: 0px !important;
+    margin-right: 70px !important;
+}
+@media (max-width:480px)
+{
+    .navbar-brand
+    {
+        font-size: 20px;
+    }
+
+    .logo
+    {
+        margin-top: -40px;
+        width: 120px;
+        height: 50px;
+        margin-top: -10px !important;
+    }
+
+}
+.btn.btn-success
+{
+    background-color:#617aa2;
+    border: none !important;
+    color: white !important;
+    margin-left: 5px;
+}
+.btn.btn-success:hover
+{
+    background-color:#1b6d85 !important;
+    border: none !important;
+    color: white !important;
+    margin-left: 5px;
+}
+.btn.btn-default
+{
+    background-color:#58c8dc !important;
+    color: white !important;
+    border: none;
+    margin-left: 5px;
+}
+.logo
+{
+    margin-top: -40px;
+}
+#serach
+{
+    width: 100%;
+    padding-top: 150px;
+    padding-bottom: 200px;
+    background:url("../../images/back/bk.png");
+}
+.icosearch
+{
+    font-size:20px;
+    color: white;
+
+}
+.icosearch1
+{
+
+    font-size:20px;
+    color:white;
+
+
+}
+.titlesearch
+{
+    font-size: 12px;
+    color: white;
+
+}
+.titlesearch1
+{
+
+    font-size: 12px;
+    color: white;
+
+}
+.search
+{
+    width: 70%;
+    height: 50px;
+    border-radius: 5px;
+    background-color: white;
+}
+.btnsearch
+{
+    width: 100px;
+    height: inherit;
+    border-radius: 5px;
+    border: none !important;
+    background-color: #d7e0f0;
+}
+.modal-content
+{
+    background-color:#19283f;
+    color: white;
+}
+.fa-users
+{
+    color: green;
+}
+input[type=text]
+{
+    width: 250px;
+    height: 30px;
+    margin-bottom: 10px;
+}
+input[type=password]
+{
+
+    width: 250px;
+    height: 30px;
+    margin-bottom: 10px;
+}
+input[type=email]
+{
+
+    width: 250px;
+    height: 30px;
+    margin-bottom: 10px;
+}
+input[type=submit]
+{
+    width: 70px !important;
+    height: 40px;
+    border-radius:5px;
+    background-color:#617aa2;
+    color: black;
+    font-family: 'A Iranian Sans';
+    text-align: center;
+    border:none !important;
+}
+.closemodal
+{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    line-height: 30px;
+    border-radius:5px;
+    top: 0px;
+    left: 0px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+    background-color: red;
+}
+/***********************************************create modal*******************************************************/
+#modal{
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    min-height: 1000px;
+    background-color:rgba(12, 20, 31,0.7);
+    display:none;
+    position: fixed;
+}
+#modal #cremodal
+{
+    width:500px;
+    direction: rtl;
+    min-height:250px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px maroon;
+    background-color:#19283f;
+    position: absolute;
+    left:calc(50% - 250px);
+    top:100px;
+}
+.closemodallog
+{
+
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    line-height: 30px;
+    border-radius:5px;
+    top: 0px;
+    left: 0px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+    color: white;
+    background-color: red;
+}
+.contentmodal
+{
+    position: absolute;
+    top: 100px;
+    color: white;
+    left:calc(50% - 130px);
+}
+#user
+{
+    text-align: center;
+   padding-top: 20px;
+}
+#user span{
+    color: white;
+    font-size: 26px;
+}
+/*******************************************************************create search**************************************/
+.searchdoc
+{
+    width: 100%;
+    height: inherit;
+    border: none;
+    direction: rtl;
+}
+.searchdoc input[type=text]
+{
+
+    width: 80%;
+    height: inherit;
+    border: none;padding-right: 20px;
+}
+.searchdoc input[type=submit]
+{
+    width: 100px;
+    height:50px;
+    position: absolute;
+    left:176px;
+    background-color:rgb(215, 224, 240) ;
+
+}
+@media(min-width:990px) and (max-width:1200px )
+{
+
+    .searchdoc input[type=text]
+    {
+
+        width: 80%;
+        font-size: 12px;
+        height: inherit;
+        border: none;padding-right: 20px;
+    }
+
+    .searchdoc input[type=submit]
+    {
+        width: 100px;
+        height:50px;
+        position: absolute;
+        left:15px;
+        background-color:rgb(215, 224, 240) ;
+
+    }
+
+    .search
+    {
+        width: 100%;
+        height: 50px;
+        border-radius: 5px;
+        background-color: white;
+    }
+    .logo
+    {
+        width: 110px;
+        height: 50px;
+        margin-top: -20px;
+    }
+
+}
+
+@media(min-width:480px) and (max-width:990px )
+{
+
+    .searchdoc input[type=text]
+    {
+
+        width: 80%;
+        font-size: 12px;
+        height: inherit;
+        border: none;padding-right: 20px;
+    }
+
+    .searchdoc input[type=submit]
+    {
+        width: 100px;
+        height:50px;
+        position: absolute;
+        left:15px;
+        background-color:rgb(215, 224, 240) ;
+
+    }
+
+    .search
+    {
+        width: 100%;
+        height: 50px;
+        border-radius: 5px;
+        background-color: white;
+    }
+    .logo
+    {
+        width: 110px;
+        height: 50px;
+        margin-top: -20px;
+    }
+
+}
+@media(max-width:480px)
+{
+
+    .searchdoc input[type=text]
+    {
+
+        width: 80%;
+        font-size: 10px;
+        height: inherit;
+        border: none;padding-right: 20px;
+    }
+
+    .searchdoc input[type=submit]
+    {
+        width: 100px;
+        height:50px;
+        position: absolute;
+        left:15px;
+        background-color:rgb(215, 224, 240) ;
+
+    }
+
+    .search
+    {
+        width: 100%;
+        height: 50px;
+        border-radius: 5px;
+        background-color: white;
+    }
+
+}
+/*****************************************************************************create software website**********************************/
+#software
+{
+    width: 100%;
+    padding-top: 20px;
+    background-color:#3ccfe3;
+    position: relative;
+}
+#software .mobile
+{
+    margin-top: -100px;
+}
+@media(max-width: 480px)
+{
+
+    #software .mobile
+    {
+        margin-top: -40px;
+        width: 70px;
+        height: 80px;
+    }
+}
+/**************************************************************************create carousel website************************************/
+#carousel
+{
+    width: 100%;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    background-color:#ffffff;
+}
+.owltext
+{
+    color:#617aa2;
+    font-size: 18px;
+}
+.owltext1
+{
+    color:rgb(181, 93, 246);
+    font-size: 12px;
+}
+.owl
+{
+    padding-top: 50px;
+}
+.owl-carousel.owl-theme
+{
+    width: 80%;
+    left:200px !important;
+}
+@media(max-width: 480px)
+{
+    .owl-carousel.owl-theme
+    {
+        width: 100%;
+        left:0px !important;
+    }
+}
+
+.owl-wrapper-outer
+{
+    text-align: center;
+}
+.owlimg
+{
+    float: right;
+    padding-left: 20px
+}
+/****************************************************maghalt pezeshkan***********************************************/
+#maghalat
+{
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: white;
+}
+.maghaletext
+{
+    color:#617aa2;
+    font-size: 18px;
+}
+.maghaletext1
+{
+    color:rgb(181, 93, 246);
+    font-size: 12px;
+}
+.bg1
+{
+    width:245px;
+    margin-top: 20px;
+    margin-left: 10px;
+    min-height: 245px;
+    background: url("../../images/imb_maghale/1.png") ;
+}
+.txt
+{
+
+    padding-top: 20px;
+}
+.imgmaghale
+{
+    width: 100%;
+    padding-top: 20px;
+    height: inherit;
+}
+.txtmaghale
+{
+    color: white;
+    position: absolute;
+    font-size: 18px;
+    line-height: 22px;
+    top:30px;
+    width: 80%;
+    right: 28px;
+    background-color: #1c2b43;
+}
+.peztxt
+{
+    color: white;
+    background-color:#3ccfe3;
+    font-size: 12px;
+    position: absolute;
+    top: 80px;
+    right: 28px;
+    width: 80%;
+}
+
+@media(min-width:990px) and (max-width:1200px)
+{
+    .imgmaghale
+    {
+        width: 100%;
+        padding-top: 20px;
+        height: inherit;
+    }
+    .txtmaghale
+    {
+        color: white;
+        position: absolute;
+        font-size: 14px;
+        line-height: 22px;
+        top:30px;
+        width: 80%;
+        right: 22px;
+        background-color: #1c2b43;
+    }
+    .peztxt
+    {
+        color: white;
+        background-color:#3ccfe3;
+        font-size: 10px;
+        position: absolute;
+        top: 78px;
+        right: 22px;
+        width: 80%;
+    }
+}
+@media(min-width:768px) and (max-width:990px)
+{
+
+    .imgmaghale
+    {
+        width: 100%;
+        padding-top: 20px;
+        height: inherit;
+    }
+    .txtmaghale
+    {
+        color: white;
+        position: absolute;
+        font-size: 12px;
+        line-height: 22px;
+        top:30px;
+        width: 80%;
+        right: 17px;
+        background-color: #1c2b43;
+    }
+    .peztxt
+    {
+        color: white;
+        background-color:#3ccfe3;
+        font-size: 8px;
+        position: absolute;
+        top: 78px;
+        right: 16px;
+        width: 80%;
+    }
+}
+@media(min-width:480px) and (max-width:768px)
+{
+
+    #bg1
+    {
+        width:200px;
+        margin-top: 20px;
+        margin-left: 10px;
+        min-height: 245px;
+        background: url("../../images/imb_maghale/1.png") ;
+    }
+    #bg2
+    {
+        width:200px;
+        margin-top: 20px;
+        margin-left: 10px;
+        min-height: 245px;
+        background: url("../../images/imb_maghale/2.png") ;
+    }
+    #bg3
+    {
+        width:200px;
+        margin-top: 20px;
+        margin-left: 10px;
+        min-height: 245px;
+        background: url("../../images/imb_maghale/3.png") ;
+    }
+    #bg4
+    {
+        width:200px;
+        margin-top: 20px;
+        margin-left: 10px;
+        min-height: 245px;
+        background: url("../../images/imb_maghale/4.png") ;
+    }
+}
+@media(max-width:480px)
+{
+
+    #bg1
+    {
+        width:245px;
+        margin-top: 20px;
+        margin-left: 10px;
+        min-height: 245px;
+        background: url("../../images/imb_maghale/1.png") ;
+    }
+    #bg2
+    {
+        width:245px;
+        margin-top: 20px;
+        margin-left: 10px;
+        min-height: 245px;
+        background: url("../../images/imb_maghale/2.png") ;
+    }
+    #bg3
+    {
+        width:245px;
+        margin-top: 20px;
+        margin-left: 10px;
+        min-height: 245px;
+        background: url("../../images/imb_maghale/3.png") ;
+    }
+    #bg4
+    {
+        width:245px;
+        margin-top: 20px;
+        margin-left: 10px;
+        min-height: 245px;
+        background: url("../../images/imb_maghale/4.png") ;
+    }
+}
+/*************************************************************************create pezeshk******************************/
+#pezeshk
+{
+    width: 100%;
+    padding-bottom:200px;
+    padding-top: 30px;
+    background-color: white;
+}
+.peztxtnew
+{
+    color:#6b82a8;
+    font-size: 18px;
+}
+.peztxtnew1
+{
+
+    color:rgb(181, 93, 246);
+    font-size: 12px;
+}
+.pad
+{
+    padding-top: 40px;
+}
+.padtxt
+{
+    color:#6b82a8;
+    font-size: 16px;
+    font-weight: 600;
+}
+.padtxt1
+{
+
+    color:#1a1a1a;
+    font-size:12px;
+}
+.imgpez
+{
+    margin-left: 120px;
+}
+.navbar-inverse .nav .active > a, .navbar-inverse .nav .active > a:hover, .navbar-inverse .nav .active > a:focus
+{
+    background-color:#d94133 !important;
+}
+.modal
+{
+    width:700px !important;
+    overflow-y:hidden ;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+/***************************************************create footer to websote*******************************************/
+#footer
+{
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color:#212833;
+}
+.social
+{
+    font-size: 30px;
+    color:#617aa2;
+
+}
+.social span{
+    margin-left: 20px;
+}
+.menufooter
+{
+    padding-top: 10px;
+    font-size: 15px;
+}
+.menufooter span
+{
+    margin-left: 10px;
+}
+.menufooter span a{
+    color: white;
+    text-decoration: none;
+}
+.phone
+{
+    font-size: 15px;
+    color: #597094;
+    padding-top: 15px;
+}
+.copyright
+{
+    font-size: 15px;
+    color:#96a1a7;
+    padding-top: 15px;
+}
+@media(min-width:990px) and (max-width:1200px) {
+    .responsive
+    {
+        width: 170px;
+        height: 60px;
+    }
+    .social
+    {
+        font-size: 20px;
+        color:#617aa2;
+
+    }
+    .social span{
+        margin-left: 10px;
+    }
+    .menufooter
+    {
+        padding-top: 10px;
+        font-size: 15px;
+    }
+    .menufooter span
+    {
+        margin-left: 10px;
+    }
+    .menufooter span a{
+        color: white;
+        text-decoration: none;
+    }
+}
+
+@media(min-width:768px) and (max-width:990px) {
+    .responsive
+    {
+        width: 130px;
+        height: 40px;
+    }
+    .social
+    {
+        font-size: 20px;
+        color:#617aa2;
+
+    }
+    .social span{
+        margin-left: 10px;
+    }
+    .menufooter
+    {
+        padding-top: 10px;
+        font-size: 12px;
+    }
+    .menufooter span
+    {
+        margin-left: 5px;
+    }
+    .menufooter span a{
+        color: white;
+        text-decoration: none;
+    }
+}
+@media(max-width:768px) {
+    .responsive
+    {
+        width: 80px;
+        height: 40px;
+    }
+
+    .social
+    {
+        font-size: 20px;
+        color:#617aa2;
+
+    }
+    .social span{
+        margin-left: 10px;
+    }
+    .menufooter
+    {
+        padding-top: 10px;
+        font-size: 10px;
+    }
+    .menufooter span
+    {
+        margin-left: 3px;
+    }
+    .menufooter span a{
+        color: white;
+        text-decoration: none;
+    }
+}
+
+/********************************************************top*********************************************************/
+.topdisplay
+{
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    text-align: center;
+    background-color:rgb(25, 40, 63);
+    border-radius: 25px;
+    display: none;
+    cursor: pointer;
+}
+.topdisplay span
+{
+    color:greenyellow;
+    line-height: 50px;
+    font-size: 30px;
+}
+/******************************************************aniamte website*****************************************/
+.titlesearch,.titlesearch1,.owl,.bg1,.imgpez,.padtxt,.padtxt1{
+    opacity: 0;
+}
+/*****************************************************create menu_footer*************************************/
+#page_menu_footer
+{
+    width: 100%;
+    background-color: wheat;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+/*****************************************************create contact_us **********************************/
+#contact_us
+{
+    width: 100%;
+    background-color: wheat;
+    padding-bottom: 150px;
+    padding-top: 50px;
+}
+#contact_us form
+{
+    width: 80%;
+    margin: 0px auto;
+    direction: rtl;
+}
+#contact_us form input[type=text]
+{
+    width: 300px;
+    height: 40px;
+    border-radius: 5px;
+    display: block;
+}
+#contact_us form input[type=email]
+{
+    width: 300px;
+    height: 40px;
+    border-radius: 5px;
+    display: block;
+}
+
+#contact_us form input[type=submit]
+{
+    width: 100px;
+    height: 50px;
+    border-radius: 5px;
+    display: block;
+}
+#contact_us form textarea
+{
+    width: 500px;
+    min-height: 300px;
+}
